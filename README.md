@@ -11,7 +11,7 @@ For this experiment I used an external system to manage the GPS and generate the
 
 https://github.com/RocketManRC/AboutTimeServer
 
-Possible applications for this are to build a more accurate time reference or real time clock, improve the
+Possible applications for this are to build a more accurate time reference or real time clock, improve the accuracy of the FreqCount or FreqMeasure libraries and generate precision pulse sequences.
 
 # Results
 I didn't spend much time testing this but it appeared to achieve at least as well as the rated performance of the TCXO which is 200 PPB (or 15 ms/day).
