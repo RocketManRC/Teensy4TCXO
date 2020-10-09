@@ -1,7 +1,7 @@
 # Teensy4TCXO
 This code for the Teensy 4.0 tests the idea of using a TCXO (Temperature Compensated Crystal Oscillator) as a stable clock reference. It is an interesting experiment if nothing else.
 
-The concept is to connect a 10 MHz TCXO to pin 9 and use the library FreqCount to count TCXO pulses for one second as determined by the internal CPU clock. At the same time the one second of the Pulse Per Second (PPS) from the GPS is measured using the CPU cycle counter. The ration of PPS counts versus TCXO counts is calculated which is independent of the CPU clock (i.e. it is a calibration of the TCXO). This is only calculated once.
+The concept is to connect a 10 MHz TCXO to pin 9 and use the library FreqCount to count TCXO pulses for one second as determined by the internal CPU clock. At the same time the one second of the Pulse Per Second (PPS) from the GPS is measured using the CPU cycle counter. The ratio of PPS counts versus TCXO counts is calculated which is independent of the CPU clock (i.e. it is a calibration of the TCXO). This is only calculated once.
 
 After 10 seconds (arbitrary) an interval timer is initialized with the calculated interval and then updated at the end of every interval using the TCXO as a reference. This creates a emulated PPS signal.
 
